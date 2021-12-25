@@ -1,0 +1,10 @@
+{
+    "name": "nucamp-portfolio-project",
+    "version": "1.0.0",
+    "description": "NuCamp Portfolio Project for NodeJS, Express, and MongoDB",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon ./bin/www"
+    }
+  }
