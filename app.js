@@ -23,10 +23,10 @@
   * @return {string} The generated string
   */
  const generateRandomString = function(length) {
-   const text = '';
+   let text = '';
    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
  
-   for (const i = 0; i < length; i++) {
+   for (let i = 0; i < length; i++) {
      text += possible.charAt(Math.floor(Math.random() * possible.length));
    }
    return text;
@@ -104,13 +104,13 @@
          });
  
          // we can also pass the token to the browser to make requests from there
-         res.redirect('/#' +
+         res.redirect('http://localhost:3000/#' +
            querystring.stringify({
              access_token: access_token,
              refresh_token: refresh_token
            }));
        } else {
-         res.redirect('/#' +
+         res.redirect('http://localhost:3000/#' +
            querystring.stringify({
              error: 'invalid_token'
            }));
